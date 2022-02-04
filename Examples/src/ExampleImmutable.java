@@ -1,5 +1,8 @@
 final class MyImmutable {
 
+    /*
+    Advantage of immutable obj in multithreading and obj as key in hashmap
+    */
     private final int id;
     private final String name;
 
