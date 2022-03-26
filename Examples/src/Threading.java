@@ -24,7 +24,11 @@ public class Threading {
 
         });
 
-        boolean b = executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS);
+        try {
+            boolean b = executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
